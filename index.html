@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listify</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1 class="app-title">
+                <span class="app-icon" aria-hidden="true" style="vertical-align:middle;display:inline-block;margin-right:14px;">
+                    <img src="https://www.shutterstock.com/image-vector/do-list-planning-icon-concept-600nw-739093225.jpg" alt="To-Do Icon" style="width:48px;height:48px;object-fit:cover;border-radius:8px;vertical-align:middle;position:relative;top:-6px;">
+                </span>
+                Listify
+            </h1>
+            <p class="app-subtitle">Organize your day with style</p>
+        </div>
+        
+        <div class="motivational-quote" id="motivationalQuote">Stay positive, work hard, make it happen!</div>
+        <div class="main-content">
+            <div class="task-input-section">
+                <div class="input-group">
+                    <input type="text" class="task-input" id="taskInput" placeholder="What needs to be done today?" maxlength="200">
+                    <select class="category-select" id="categorySelect">
+                        <option value="" selected disabled>Category</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="date" class="due-date-input" id="dueDateInput">
+                    <button class="add-button" id="addBtn">Add Task</button>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pendingTasks">0</div>
+                    <div class="stat-label">Remaining</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="streakCount">0</div>
+                    <div class="stat-label">Streak 🔥</div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+                <div class="progress-bar-label" id="progressBarLabel">0% Complete</div>
+            </div>
+            
+            <div class="tasks-section">
+                <h2 class="section-title">
+                    <span>📋</span>
+                    Your Tasks
+                </h2>
+                <div class="task-list" id="taskList">
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">🎯</div>
+                        <h3 class="empty-title">Ready to be productive?</h3>
+                        <p class="empty-subtitle">Add your first task to get started on your journey to success!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
